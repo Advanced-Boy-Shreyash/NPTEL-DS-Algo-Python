@@ -49,16 +49,26 @@ print(expanding([1, 3, 7, 10]))
 # [59, 4]
 
 def sumsquare(l):
-    lise = []
-    e, o = 0, 0
-    for i in range(0, len(l)):
-        if l[i] % 2 == 0:
-            e = e + l[i]**2
+    temp = []
+    temp2 = []
+
+    for i in l:
+        squared = i * i
+        if i % 2 == 0:
+            temp.append(squared)
         else:
-            o = o + l[i]**2
-    lise.append(o)
-    lise.append(e)
-    return lise
+            temp2.append(squared)
+
+    f1 = sum(temp)
+    f2 = sum(temp2)
+
+    return [f2, f1]
+
+# OR
+# def sumsquare(l):
+#     even_squares = sum(x ** 2 for x in l if x % 2 == 0)
+#     odd_squares = sum(x ** 2 for x in l if x % 2 != 0)
+#     return [odd_squares, even_squares]
 
 
 print(sumsquare([1, 3, 5]))
@@ -91,7 +101,29 @@ print(sumsquare([-1, -2, 3, 7]))
 # [[3]]
 
 def transpose(m):
-    return [list(x) for x in zip(*m)]
+    num_rows = len(m)
+    num_cols = len(m[0])
+    transposed = []
+    for col in range(num_cols):
+        transpose_rows = []
+        for row in range(num_rows):
+            transpose_rows.append(m[row][col])
+        transposed.append(transpose_rows)
+    return transposed
+
+# OR
+# def transpose(m):
+#     l = []
+#     for x in zip(*m):
+#         transpose_row = list(x)
+#         l.append(transpose_row)
+
+#     return l
+
+# OR
+
+# def transpose(m):
+#     return [list(x) for x in zip(*m)]
 
 
 print(transpose([[1, 2, 3], [4, 5, 6]]))
