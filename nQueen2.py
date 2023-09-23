@@ -1,7 +1,7 @@
 def initialize(n):
     for key in ['queen', 'row', 'col', 'nwtose', 'swtone']:
         board[key] = {}
-        
+
     for i in range(n):
         board['queen'][i] = -1
         board['row'][i] = 0
