@@ -34,6 +34,26 @@
 
 # print(histogram([13,12,11,13,14,13,7,7,13,14,12]))
 
+# def histogram(l):
+#     # Initialize an empty list to store the result
+#     result = []
+
+#     # Loop through the input list 'l'
+#     for item in l:
+#         # Check if the item is already in the result list
+#         if (item, l.count(item)) not in result:
+#             # If not, add a tuple of (item, count of item) to the result list
+#             result.append((item, l.count(item)))
+
+#     # Sort the result list first by item value and then by count
+#     result.sort(key=lambda x: (x[0], x[1]))
+
+#     return result
+
+
+# print(histogram([13, 12, 11, 13, 14, 13, 7, 7, 13, 14, 12]))
+
+
 def histogram(l):
     d = {}
     for i in l:
@@ -108,6 +128,7 @@ def transcript(coursedetails, studentdetails, grades):
         list1.append(a)
     return list1
 
-print(transcript([("MA101","Calculus"),("PH101","Mechanics"),("HU101","English")],
-           [("UGM2021001","Rohit Grewal"),("UGP2021132","Neha Talwar")],
-           [("UGM2021001","MA101","AB"),("UGP2021132","PH101","B"),("UGM2021001","PH101","B")]))
+
+print(transcript([("MA101", "Calculus"), ("PH101", "Mechanics"), ("HU101", "English")],
+                 [("UGM2021001", "Rohit Grewal"), ("UGP2021132", "Neha Talwar")],
+                 [("UGM2021001", "MA101", "AB"), ("UGP2021132", "PH101", "B"), ("UGM2021001", "PH101", "B")]))
