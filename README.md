@@ -5,5 +5,3 @@ In this repository every file has no. of functions which are created according t
 In unit files there are commented code which is based on respective units.
 For ex. in unit1 file there are codes which are commented and this codes are totally from lectures.
 Further more this code is also availavle in the pdf provided in the section of lecture material on NPTEL.
-
-[Programming, Data Structures And Algorithms Using Python.pdf](https://github.com/Advanced-Boy-Shreyash/NPTEL-DS-Algo-Python/files/12873343/Programming.Data.Structures.And.Algorithms.Using.Python.pdf)
